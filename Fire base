@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siam Vai Earn App</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-600 p-4 text-white text-center text-xl font-bold">
+    🪙 Siam Vai Earn App
+  </header>
+
+  <!-- Main Content -->
+  <main class="p-6 text-center">
+    <h1 class="text-2xl font-semibold mb-4">Firebase Connected ✅</h1>
+    <p class="mb-4">এই ওয়েবসাইট এখন ঠিকমতো কাজ করছে।</p>
+    <button onclick="checkFirebase()" class="bg-blue-500 text-white px-4 py-2 rounded">
+      Check Firebase
+    </button>
+
+    <div id="result" class="mt-4 font-semibold text-green-600"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-3 mt-10">
+    © 2025 Siam Vai Earn App
+  </footer>
+
+  <!-- Firebase Scripts -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-analytics.js";
+
+    // 🔥 Firebase Config
+    const firebaseConfig = {
+      apiKey: "AIzaSyA1xfDV6Jj28YmQlmpcrRAvn_o5Jri0-Kg",
+      authDomain: "siam-vai-7818d.firebaseapp.com",
+      projectId: "siam-vai-7818d",
+      storageBucket: "siam-vai-7818d.appspot.com",
+      messagingSenderId: "651557083769",
+      appId: "1:651557083769:web:84f0a760c82b843c4312a8",
+      measurementId: "G-KJR7BQYECS"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    // ✅ Test Function
+    window.checkFirebase = function () {
+      document.getElementById("result").innerText = "✅ Firebase সংযোগ সফল হয়েছে!";
+    };
+  </script>
+</body>
+</html>
